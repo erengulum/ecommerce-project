@@ -1,0 +1,5 @@
+
+<!--Component'ten aldıgımız verileri(products[] arrayi ile almıstık) ekrana basiyoruz-->
+<p *ngFor="let tempProduct of products" >
+    {{tempProduct.name}}: {{tempProduct.unitPrice | currency:"USD"}}
+</p>

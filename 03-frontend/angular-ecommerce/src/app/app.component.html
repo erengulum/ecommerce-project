@@ -1,0 +1,74 @@
+<!--Buradaki cogu seyi hazır aldık. Yani bu dizaynı aslında designer yapıp bize gönderiyor
+Bize ise sayfanın uygun yerlerine asıl logic işlevini üstlenen "componentler" ekliyoruz.
+
+
+Buradaki class="" ların çoğu ya css ya da bootstrapta olusturulmus sınıflar/style'lardır. css olanlari Chad Darby hazırlamış.
+Detaylar için proje içinde styles.css dosyasi var.Buradaki class isimlerini kopyala ve orada arat.Kendin de değişiklikler
+yapabilirsin-->
+
+<div class="page-wrapper">
+
+    <!-- MENU SIDEBAR-->
+    <aside class="menu-sidebar d-none d-lg-block">
+        <div class="logo">
+            <a routerLink="/products">
+                <img src="assets/images/logo.png" alt="luv2shop" class="img-responsive">
+            </a>
+        </div>
+
+        <!--Category menü için hazırladığımız componenti burada gösteriyoruz-->
+        <app-product-category-menu></app-product-category-menu>
+
+
+    </aside>
+    <!-- END MENU SIDEBAR-->
+
+
+    <!-- PAGE CONTAINER-->
+    <div class="page-container">
+        <!-- HEADER DESKTOP-->
+        <header class="header-desktop">
+            <div class="section-content section-content-p30">
+                <div class="container-fluid">
+                    <div class="header-wrap">
+
+
+                        <!--Olusturdugumuz componenti buraya koyduk-->
+                        <app-search></app-search>
+                        <!--Bu component ise sepet kısmı icin:-->
+                        <app-cart-status></app-cart-status>
+                    
+                    </div>
+                    <div class="account-wrap"></div>
+                </div>
+            </div>
+        </header>
+        <!-- END HEADER DESKTOP-->
+
+
+
+
+        <!--BURASI ONEMLI: Kendi olusturdugumuz componenti sayfanin bu kısmına koyuyoruz-->
+        <!-- MAIN CONTENT-->
+        <router-outlet></router-outlet>
+
+
+
+
+
+
+    </div>
+</div>
+
+
+
+<!-- END PAGE CONTAINER-->
+
+
+<footer>
+    <ul>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">Help</a></li>
+    </ul>
+</footer>

@@ -1,0 +1,33 @@
+
+<!--Component'ten aldıgımız verileri(products[] ) tablo olarak ekrana basiyoruz
+class= "" olanlar bootstrap classları.Projeye bootstrap eklemistik-->
+
+<table class="table">
+
+    <thead class="thead-dark">
+        <tr>
+            <th></th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Units in Stock</th>
+        </tr>
+
+    </thead>
+
+
+    <tbody>
+
+        <tr *ngFor="let tempProduct of products">
+            <td class="align-midlde">
+                <img src="{{tempProduct.imageUrl}}" height="50"/>
+            </td>
+            <td class="align-midlde">{{tempProduct.name}}</td>
+            <td class="align-midlde">{{tempProduct.unitPrice | currency:"USD"}}</td>
+            <td class="align-midlde">{{tempProduct.unitsInStock}}</td>
+        </tr>
+
+
+    </tbody>
+
+
+</table>
